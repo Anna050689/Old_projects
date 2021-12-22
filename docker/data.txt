@@ -1,0 +1,1 @@
+{"people": [{"name": "Anna", "age": 23, "from": "Ukraine"}, {"name": "Bob", "age": 21, "from": "USA"}]}

@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  react-app:
+    build:
+      context: ./react-app/
+      dockerfile: dev.Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - react-app-node-modules:/app/node_modules
+      - ./react-app/:/app
+
+  python-tg-bot:
+    build:
+      context: backend
+      dockerfile: backend/dev.bot.Dockerfile
+    environment:
+      - PIPENV_DOTENV_LOCATION=/.tg-bot.env
+    volumes:
+      - ./.tg-bot.env:/.tg-bot.env
+      - ./test_db:/test_db
+      - ./test_bot_data:/test_data
+
+  python-tg-client:
+    build:
+      context: backend
+      dockerfile: backend/dev.tg_client.Dockerfile
+    environment:
+      - PIPENV_DOTENV_LOCATION=/.tg-bot.env
+    volumes:
+      - ./.tg-bot.env:/.tg-bot.env
+      - ./test_db:/test_db
+    stdin_open: true
+    tty: true
+
+volumes:
+  react-app-node-modules:
