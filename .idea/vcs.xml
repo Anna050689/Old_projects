@@ -11,5 +11,6 @@
     <mapping directory="$PROJECT_DIR$/epam-imdb-tests-lecture" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/final_project" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/final_project_gitlab/final_project" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/game-store-testing-hw" vcs="Git" />
   </component>
 </project>

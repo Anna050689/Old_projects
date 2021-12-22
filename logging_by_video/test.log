@@ -1,0 +1,10 @@
+2021-01-08 17:26:18,436: __main__: Tried to divide by zero
+Traceback (most recent call last):
+  File "/Users/annaimseneckaa/PycharmProjects/logging_by_video/calc.py", line 28, in divide
+    result = x / y
+ZeroDivisionError: division by zero
+2021-01-08 17:28:03,329: __main__: Tried to divide by zero
+Traceback (most recent call last):
+  File "/Users/annaimseneckaa/PycharmProjects/logging_by_video/calc.py", line 29, in divide
+    result = x / y
+ZeroDivisionError: division by zero
